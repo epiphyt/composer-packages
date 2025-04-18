@@ -89,7 +89,7 @@ final class Request {
 	 * Process request.
 	 */
 	public static function process(): void {
-		if ( \is_admin() || \wp_doing_ajax() || \wp_doing_cron() ) {
+		if ( \is_admin() || \is_login() || \wp_doing_ajax() || \wp_doing_cron() ) {
 			return;
 		}
 		

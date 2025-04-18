@@ -1,0 +1,255 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/composer-"
+"packages\n"
+"POT-Creation-Date: 2025-04-18T19:24:50+00:00\n"
+"PO-Revision-Date: 2025-04-18 21:28+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.6\n"
+"X-Poedit-Basepath: .\n"
+
+#. Plugin Name of the plugin
+#: composer-packages.php
+msgid "Composer Packages"
+msgstr "Composer Packages"
+
+#. Description of the plugin
+#: composer-packages.php
+msgid "Composer package management."
+msgstr "Composer-Paketverwaltung."
+
+#. Author of the plugin
+#: composer-packages.php
+msgid "Epiphyt"
+msgstr "Epiphyt"
+
+#. Author URI of the plugin
+#: composer-packages.php
+msgid "https://epiph.yt/en/"
+msgstr "https://epiph.yt/"
+
+#: inc/action/class-request.php:117
+msgid ""
+"Please provide a valid basic auth file via auth.json, using your email "
+"address as the username, and your license key as the password."
+msgstr ""
+"Bitte gib eine gültige Basis-Authentifizierungsdatei über die auth.json "
+"an, und benutze deine E-Mail-Adresse als Benutzernamen und deinen "
+"Lizenzschlüssel als Passwort."
+
+#: inc/action/class-request.php:129
+msgid ""
+"The requested file could not be found. Please verify that the product in "
+"this version exists."
+msgstr ""
+"Die angeforderte Datei konnte nicht gefunden werden. Bitte prüfe, ob das "
+"Produkt in dieser Version existiert."
+
+#: inc/action/class-request.php:137
+msgid "Epiphyt Packages API"
+msgstr "Epiphyt-Paket-API"
+
+#: inc/admin/class-assets.php:57
+msgid "The field must not be empty."
+msgstr "Dieses Feld darf nicht leer sein."
+
+#: inc/admin/class-assets.php:59
+msgid "No products found."
+msgstr "Keine Produkte gefunden."
+
+#: inc/admin/class-field.php:85
+msgid "– Please select –"
+msgstr "– Bitte auswählen –"
+
+#: inc/admin/class-post-fields.php:58
+msgid "Product"
+msgstr "Produkt"
+
+#: inc/admin/class-post-fields.php:65
+msgid "Version"
+msgstr "Version"
+
+#: inc/admin/class-post-fields.php:138
+msgid "Invalid nonce."
+msgstr "Ungültige Nonce."
+
+#: inc/admin/class-post-fields.php:143
+msgid "You are not allowed to edit a package."
+msgstr "Du hast keine Berechtigung, ein Paket zu bearbeiten."
+
+#: inc/admin/class-settings.php:31 inc/admin/class-settings.php:122
+msgid "Composer Packages Settings"
+msgstr "Einstellungen für Composer-Pakete"
+
+#: inc/admin/class-settings.php:56 inc/admin/class-settings.php:147
+msgid "Products"
+msgstr "Produkte"
+
+#: inc/admin/class-settings.php:61 inc/admin/class-settings.php:93
+msgid "Package Title"
+msgstr "Pakettitel"
+
+#: inc/admin/class-settings.php:62 inc/admin/class-settings.php:94
+msgid "Package Name"
+msgstr "Paketname"
+
+#: inc/admin/class-settings.php:63 inc/admin/class-settings.php:95
+msgid "Type"
+msgstr "Typ"
+
+#: inc/admin/class-settings.php:64 inc/admin/class-settings.php:96
+msgid "Base Path"
+msgstr "Basis-Pfad"
+
+#: inc/admin/class-settings.php:65 inc/admin/class-settings.php:97
+msgid "Actions"
+msgstr "Aktionen"
+
+#: inc/admin/class-settings.php:79 inc/admin/class-settings.php:110
+msgid "Delete package"
+msgstr "Paket löschen"
+
+#: inc/admin/class-settings.php:86
+msgid "No packages found."
+msgstr "Keine Pakete gefunden."
+
+#: inc/admin/class-settings.php:102
+msgid "Add package"
+msgstr "Paket hinzufügen"
+
+#: inc/admin/class-settings.php:128
+msgid "Namespace"
+msgstr "Namensraum"
+
+#: inc/admin/class-settings.php:137
+msgid ""
+"The namespace of your Composer packages, which is added as prefix to your "
+"package names."
+msgstr ""
+"Der Namensraum deiner Composer-Pakete, der als Präfix zu deinen "
+"Paketnamen hinzugefügt wird."
+
+#: inc/admin/class-settings.php:162 inc/admin/class-settings.php:163
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: inc/class-post-type.php:37
+msgid "Data"
+msgstr "Daten"
+
+#: inc/class-post-type.php:53
+msgid "Package name"
+msgstr "Paketname"
+
+#: inc/class-post-type.php:61
+msgid "Package version"
+msgstr "Paketversion"
+
+#: inc/class-post-type.php:79 inc/class-post-type.php:80
+msgid "Add Package"
+msgstr "Paket hinzufügen"
+
+#: inc/class-post-type.php:81
+msgid "All Packages"
+msgstr "Alle Pakete"
+
+#: inc/class-post-type.php:82
+msgid "Package Archive"
+msgstr "Paket-Archiv"
+
+#: inc/class-post-type.php:83
+msgid "Package Attributes"
+msgstr "Paket-Attribute"
+
+#: inc/class-post-type.php:84
+msgid "Edit Package"
+msgstr "Paket bearbeiten"
+
+#: inc/class-post-type.php:85
+msgid "Featured Image"
+msgstr "Beitragsbild"
+
+#: inc/class-post-type.php:86
+msgid "Filter Packages list"
+msgstr "Paketliste filtern"
+
+#: inc/class-post-type.php:87
+msgid "Insert into Package"
+msgstr "Zu Paket hinzufügen"
+
+#: inc/class-post-type.php:88
+msgid "Packages list"
+msgstr "Paketliste"
+
+#: inc/class-post-type.php:89
+msgid "Packages list navigation"
+msgstr "Paket-Listennavigation"
+
+#: inc/class-post-type.php:90 inc/class-post-type.php:92
+msgid "Packages"
+msgstr "Pakete"
+
+#: inc/class-post-type.php:91
+msgctxt "Post Type General Name"
+msgid "Packages"
+msgstr "Pakete"
+
+#: inc/class-post-type.php:93
+msgid "New Package"
+msgstr "Neues Paket"
+
+#: inc/class-post-type.php:94
+msgid "Not found"
+msgstr "Nicht gefunden"
+
+#: inc/class-post-type.php:95
+msgid "Not found in Trash"
+msgstr "Nicht im Papierkorb gefunden"
+
+#: inc/class-post-type.php:97
+msgid "Remove featured image"
+msgstr "Beitragsbild entfernen"
+
+#: inc/class-post-type.php:98
+msgid "Search Package"
+msgstr "Pakete suchen"
+
+#: inc/class-post-type.php:99
+msgid "Set featured image"
+msgstr "Beitragsbild festlegen"
+
+#: inc/class-post-type.php:100
+msgctxt "Post Type Singular Name"
+msgid "Package"
+msgstr "Paket"
+
+#: inc/class-post-type.php:101
+msgid "Update Package"
+msgstr "Paket aktualisieren"
+
+#: inc/class-post-type.php:102
+msgid "Uploaded to this Package"
+msgstr "Hochgeladen zu diesem Paket"
+
+#: inc/class-post-type.php:103
+msgid "Use as featured image"
+msgstr "Als Beitragsbild nutzen"
+
+#: inc/class-post-type.php:104
+msgid "View Package"
+msgstr "Paket anzeigen"
+
+#: inc/class-post-type.php:105
+msgid "View Packages"
+msgstr "Pakete anzeigen"
+
+#: inc/class-post-type.php:147
+msgctxt "unknown version number"
+msgid "unknown"
+msgstr "unbekannt"

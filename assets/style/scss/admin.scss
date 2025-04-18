@@ -1,0 +1,21 @@
+.composer-packages__delete-button.composer-packages__delete-button {
+	background-color: rgba(0, 0, 0, 0) !important;
+	border-color: #d63638;
+	color: #d63638;
+	
+	&:focus,
+	&:hover {
+		border-color: #710d0d;
+		color: #710d0d;
+	}
+}
+
+.composer-packages__error.composer-packages__error {
+	color: #d63638;
+	margin: 2px 0;
+}
+
+.composer-packages__has-error {
+	border-color: #d63638 !important;
+	color: #d63638 !important;
+}

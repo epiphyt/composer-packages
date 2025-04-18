@@ -1,0 +1,57 @@
+name: deploy
+on:
+  push:
+    tags:
+      - 'v*'
+jobs:
+  run:
+    name: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # Run npm build
+      - uses: bahmutov/npm-install@v1
+      - name: npm build
+        run: npm run build
+      # Move all files that should be uploaded to a new directory
+      - run: mkdir ${{ github.event.repository.name }}-build && rsync -a --exclude-from='.github/exclude_list' . ${{ github.event.repository.name }}-build
+      - run: cd ${{ github.event.repository.name }}-build && zip -r ../${{ github.event.repository.name }}.zip * -x "${{ github.event.repository.name }}-build/*" && cd ..
+      # Install SSH key
+      - name: Install SSH key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          known_hosts: ${{ secrets.KNOWN_HOSTS }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ github.event.repository.name }}.zip
+          path: ${{ github.event.repository.name }}.zip
+      # Create release
+      - name: Create Release
+        id: create_release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ${{ github.event.repository.name }}.zip
+          name: Release ${{ github.ref_name }}
+      # Transfer file to remote server
+      - run: ssh ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }} "mkdir -p ${{ secrets.REMOTE_PATH_BASE }}"
+      - name: Rsync Deployments Action
+        uses: Burnett01/rsync-deployments@5.2.1
+        with:
+          switches: -ahv --exclude="assets/style/scss" --exclude=".*" --exclude="node_modules" --exclude="composer.*" --exclude="package*.json" --exclude="phpstan.neon.dist" --exclude="webpack.config.js"
+          path: ./${{ github.event.repository.name }}-build/
+          remote_path: ${{ secrets.REMOTE_PATH_BASE }}
+          remote_host: ${{ secrets.REMOTE_HOST }}
+          remote_user: ${{ secrets.REMOTE_USER }}
+          remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
+      - run: rm -rf ${{ github.event.repository.name }}-build
+  # Attach to artifacts
+  download:
+    name: Download Artifacts
+    needs: [run]
+    runs-on: ubuntu-latest
+    steps:
+      - name: release
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ github.event.repository.name }}.zip

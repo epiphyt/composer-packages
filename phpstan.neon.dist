@@ -1,0 +1,7 @@
+parameters:
+  level: 9
+  paths:
+    - inc/
+    - composer-packages.php
+  scanDirectories:
+    - vendor/php-stubs

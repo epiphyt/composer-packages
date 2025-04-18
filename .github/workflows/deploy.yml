@@ -14,7 +14,7 @@ jobs:
       - name: npm build
         run: npm run build
       # Move all files that should be uploaded to a new directory
-      - run: mkdir ${{ github.event.repository.name }}-build && rsync -a --exclude-from='.github/exclude_list' . ${{ github.event.repository.name }}-build
+      - run: mkdir ${{ github.event.repository.name }}-build && rsync -a --exclude-from='.github/exclude_list' --exclude="${{ github.event.repository.name }}-build" . ${{ github.event.repository.name }}-build
       - run: cd ${{ github.event.repository.name }}-build && zip -r ../${{ github.event.repository.name }}.zip * -x "${{ github.event.repository.name }}-build/*" && cd ..
       # Install SSH key
       - name: Install SSH key

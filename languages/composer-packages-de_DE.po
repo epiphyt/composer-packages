@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/composer-"
 "packages\n"
-"POT-Creation-Date: 2025-04-18T19:24:50+00:00\n"
-"PO-Revision-Date: 2025-04-18 21:28+0200\n"
+"POT-Creation-Date: 2025-04-18T19:42:49+00:00\n"
+"PO-Revision-Date: 2025-04-18 21:43+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -39,8 +39,8 @@ msgid ""
 "Please provide a valid basic auth file via auth.json, using your email "
 "address as the username, and your license key as the password."
 msgstr ""
-"Bitte gib eine gültige Basis-Authentifizierungsdatei über die auth.json "
-"an, und benutze deine E-Mail-Adresse als Benutzernamen und deinen "
+"Bitte gib eine gültige Basis-Authentifizierungsdatei über die auth.json an, "
+"und benutze deine E-Mail-Adresse als Benutzernamen und deinen "
 "Lizenzschlüssel als Passwort."
 
 #: inc/action/class-request.php:129
@@ -59,7 +59,7 @@ msgstr "Epiphyt-Paket-API"
 msgid "The field must not be empty."
 msgstr "Dieses Feld darf nicht leer sein."
 
-#: inc/admin/class-assets.php:59
+#: inc/admin/class-assets.php:59 inc/admin/class-settings.php:86
 msgid "No products found."
 msgstr "Keine Produkte gefunden."
 
@@ -92,12 +92,12 @@ msgid "Products"
 msgstr "Produkte"
 
 #: inc/admin/class-settings.php:61 inc/admin/class-settings.php:93
-msgid "Package Title"
-msgstr "Pakettitel"
+msgid "Product Title"
+msgstr "Produkttitel"
 
 #: inc/admin/class-settings.php:62 inc/admin/class-settings.php:94
-msgid "Package Name"
-msgstr "Paketname"
+msgid "Product Name"
+msgstr "Produktname"
 
 #: inc/admin/class-settings.php:63 inc/admin/class-settings.php:95
 msgid "Type"
@@ -115,10 +115,6 @@ msgstr "Aktionen"
 msgid "Delete package"
 msgstr "Paket löschen"
 
-#: inc/admin/class-settings.php:86
-msgid "No packages found."
-msgstr "Keine Pakete gefunden."
-
 #: inc/admin/class-settings.php:102
 msgid "Add package"
 msgstr "Paket hinzufügen"
@@ -132,8 +128,8 @@ msgid ""
 "The namespace of your Composer packages, which is added as prefix to your "
 "package names."
 msgstr ""
-"Der Namensraum deiner Composer-Pakete, der als Präfix zu deinen "
-"Paketnamen hinzugefügt wird."
+"Der Namensraum deiner Composer-Pakete, der als Präfix zu deinen Paketnamen "
+"hinzugefügt wird."
 
 #: inc/admin/class-settings.php:162 inc/admin/class-settings.php:163
 msgid "Settings"
@@ -253,3 +249,12 @@ msgstr "Pakete anzeigen"
 msgctxt "unknown version number"
 msgid "unknown"
 msgstr "unbekannt"
+
+#~ msgid "Package Title"
+#~ msgstr "Pakettitel"
+
+#~ msgid "Package Name"
+#~ msgstr "Paketname"
+
+#~ msgid "No packages found."
+#~ msgstr "Keine Pakete gefunden."

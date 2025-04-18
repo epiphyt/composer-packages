@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-04-18T19:24:50+00:00\n"
+"POT-Creation-Date: 2025-04-18T19:42:49+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: composer-packages\n"
@@ -51,6 +51,7 @@ msgid "The field must not be empty."
 msgstr ""
 
 #: inc/admin/class-assets.php:59
+#: inc/admin/class-settings.php:86
 msgid "No products found."
 msgstr ""
 
@@ -86,12 +87,12 @@ msgstr ""
 
 #: inc/admin/class-settings.php:61
 #: inc/admin/class-settings.php:93
-msgid "Package Title"
+msgid "Product Title"
 msgstr ""
 
 #: inc/admin/class-settings.php:62
 #: inc/admin/class-settings.php:94
-msgid "Package Name"
+msgid "Product Name"
 msgstr ""
 
 #: inc/admin/class-settings.php:63
@@ -112,10 +113,6 @@ msgstr ""
 #: inc/admin/class-settings.php:79
 #: inc/admin/class-settings.php:110
 msgid "Delete package"
-msgstr ""
-
-#: inc/admin/class-settings.php:86
-msgid "No packages found."
 msgstr ""
 
 #: inc/admin/class-settings.php:102

@@ -8,12 +8,12 @@ Plugin Name:	Composer Packages
 Description:	Composer package management.
 Author:			Epiphyt
 Author URI:		https://epiph.yt/en/
-Version:		1.0.0-dev
+Version:		1.0.0-RC1
 License:		GPL2
 License URI:	https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain:	composer-packages
 Domain Path:	/languages
-Update URI:		https://update.epiph.yt/en/
+Update URI:		https://update.epiph.yt/
 
 Composer Packages is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -33,7 +33,7 @@ along with Composer Packages. If not, see https://www.gnu.org/licenses/gpl-2.0.h
 \define( 'EPI_COMPOSER_PACKAGES_DIR', \WP_PLUGIN_DIR . '/composer-packages/' );
 \define( 'EPI_COMPOSER_PACKAGES_FILE', \EPI_COMPOSER_PACKAGES_DIR . \basename( __FILE__ ) );
 \define( 'EPI_COMPOSER_PACKAGES_URL', \plugin_dir_url( \EPI_COMPOSER_PACKAGES_FILE ) );
-\define( 'EPI_COMPOSER_PACKAGES_VERSION', '1.0.0-dev' );
+\define( 'EPI_COMPOSER_PACKAGES_VERSION', '1.0.0-RC1' );
 
 /**
  * Autoload all necessary classes.

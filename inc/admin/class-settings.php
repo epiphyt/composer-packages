@@ -58,8 +58,8 @@ final class Settings {
 		<table class="wp-list-table widefat fixed striped table-view-list">
 			<thead>
 				<tr>
-					<th scope="col" style="width: 300px;"><?php \esc_html_e( 'Package Title', 'composer-packages' ); ?></th>
-					<th scope="col" style="width: 300px;"><?php \esc_html_e( 'Package Name', 'composer-packages' ); ?></th>
+					<th scope="col" style="width: 300px;"><?php \esc_html_e( 'Product Title', 'composer-packages' ); ?></th>
+					<th scope="col" style="width: 300px;"><?php \esc_html_e( 'Product Name', 'composer-packages' ); ?></th>
 					<th scope="col" style="width: 200px;"><?php \esc_html_e( 'Type', 'composer-packages' ); ?></th>
 					<th scope="col"><?php \esc_html_e( 'Base Path', 'composer-packages' ); ?></th>
 					<th scope="col" style="width: 120px;"><?php \esc_html_e( 'Actions', 'composer-packages' ); ?></th>
@@ -83,15 +83,15 @@ final class Settings {
 				else :
 				?>
 				<tr class="composer-packages__products--not-available">
-					<td colspan="5"><?php \esc_html_e( 'No packages found.', 'composer-packages' ); ?></td>
+					<td colspan="5"><?php \esc_html_e( 'No products found.', 'composer-packages' ); ?></td>
 				</tr>
 				<?php endif; ?>
 			</tbody>
 			
 			<tfoot>
 				<tr>
-					<th scope="col"><?php \esc_html_e( 'Package Title', 'composer-packages' ); ?></th>
-					<th scope="col"><?php \esc_html_e( 'Package Name', 'composer-packages' ); ?></th>
+					<th scope="col"><?php \esc_html_e( 'Product Title', 'composer-packages' ); ?></th>
+					<th scope="col"><?php \esc_html_e( 'Product Name', 'composer-packages' ); ?></th>
 					<th scope="col"><?php \esc_html_e( 'Type', 'composer-packages' ); ?></th>
 					<th scope="col"><?php \esc_html_e( 'Base Path', 'composer-packages' ); ?></th>
 					<th scope="col"><?php \esc_html_e( 'Actions', 'composer-packages' ); ?></th>

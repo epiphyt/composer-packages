@@ -5,6 +5,7 @@ namespace epiphyt\Composer_Packages;
 
 use epiphyt\Composer_Packages\action\Request;
 use epiphyt\Composer_Packages\admin\Assets;
+use epiphyt\Composer_Packages\admin\Post_Fields;
 use epiphyt\Composer_Packages\admin\Settings;
 
 /**
@@ -22,6 +23,7 @@ final class Plugin {
 		\add_action( 'init', [ self::class, 'load_textdomain' ], 0 );
 		
 		Assets::init();
+		Post_Fields::init();
 		Post_Type::init();
 		Request::init();
 		Settings::init();

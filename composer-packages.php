@@ -8,7 +8,7 @@ Plugin Name:	Composer Packages
 Description:	Composer package management.
 Author:			Epiphyt
 Author URI:		https://epiph.yt/en/
-Version:		1.0.0-RC2
+Version:		1.0.0-RC3
 License:		GPL2
 License URI:	https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain:	composer-packages
@@ -33,7 +33,7 @@ along with Composer Packages. If not, see https://www.gnu.org/licenses/gpl-2.0.h
 \define( 'EPI_COMPOSER_PACKAGES_DIR', \WP_PLUGIN_DIR . '/composer-packages/' );
 \define( 'EPI_COMPOSER_PACKAGES_FILE', \EPI_COMPOSER_PACKAGES_DIR . \basename( __FILE__ ) );
 \define( 'EPI_COMPOSER_PACKAGES_URL', \plugin_dir_url( \EPI_COMPOSER_PACKAGES_FILE ) );
-\define( 'EPI_COMPOSER_PACKAGES_VERSION', '1.0.0-RC2' );
+\define( 'EPI_COMPOSER_PACKAGES_VERSION', '1.0.0-RC3' );
 
 /**
  * Autoload all necessary classes.

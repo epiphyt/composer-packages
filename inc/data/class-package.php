@@ -81,7 +81,7 @@ final class Package {
 			$path = \rtrim( $product['base_path'] ?? '', '/' );
 			
 			if ( ! empty( $path ) && $path !== '/' && ! \str_contains( $path, '..' ) ) {
-				$file = \sprintf( '%1$s/%2$s-%3$s.zip', $path, $name, $version );
+				$file = \sprintf( '%1$s/%2$s-v%3$s.zip', $path, $name, $version );
 			}
 		}
 		

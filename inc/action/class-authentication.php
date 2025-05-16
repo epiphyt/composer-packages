@@ -21,17 +21,6 @@ final class Authentication {
 	 * @return	bool Wether the request is authenticated
 	 */
 	public static function is_authenticated( string $username, string $password ): bool {
-		/**
-		 * Filter whether authentication is required.
-		 * 
-		 * @param	bool	$requires_authentication Wether authentication is required
-		 */
-		$requires_authentication = \apply_filters( 'composer_packages_authentication_required', true );
-		
-		if ( ! $requires_authentication ) {
-			return true;
-		}
-		
 		if ( empty( $username ) || empty( $password ) ) {
 			return false;
 		}

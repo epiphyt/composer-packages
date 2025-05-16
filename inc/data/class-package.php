@@ -42,7 +42,7 @@ final class Package {
 	 * 
 	 * @param	string	$name Package name
 	 * @param	string	$version Package version
-	 * @return	array{}|array{file: string, name: string, version: string} Package data
+	 * @return	array{}|array{authentication_required: bool, file: string, name: string, version: string} Package data
 	 */
 	public static function get_data( string $name, string $version ): array {
 		$query = new WP_Query( [
@@ -74,6 +74,7 @@ final class Package {
 		$post_id = \reset( $post_ids );
 		$file = '';
 		$name = Plugin::mixed_to_string( \get_post_meta( $post_id, 'name', true ) );
+		$authentication_required = Plugin::mixed_to_string( \get_post_meta( $post_id, 'authentication_required', true ) ) === 'yes';
 		$version = Plugin::mixed_to_string( \get_post_meta( $post_id, 'version', true ) );
 		
 		if ( ! empty( $name ) ) {
@@ -86,6 +87,7 @@ final class Package {
 		}
 		
 		return [
+			'authentication_required' => $authentication_required,
 			'file' => $file,
 			'name' => $name,
 			'version' => $version,

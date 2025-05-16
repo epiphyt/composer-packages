@@ -110,7 +110,10 @@ final class Request {
 		}
 		
 		if ( ! empty( $_GET['name'] ) && ! empty( $_GET['version'] ) ) {
-			if ( ! self::is_authenticated() ) {
+			$package = \sanitize_text_field( \wp_unslash( $_GET['name'] ) );
+			$version = \sanitize_text_field( \wp_unslash( $_GET['version'] ) );
+			
+			if ( self::requires_authentication( $package, $version ) && ! self::is_authenticated() ) {
 				\http_response_code( 401 );
 				echo self::get_response( [
 					'code' => 'invalid_auth',
@@ -118,9 +121,6 @@ final class Request {
 				] );
 				exit;
 			}
-			
-			$package = \sanitize_text_field( \wp_unslash( $_GET['name'] ) );
-			$version = \sanitize_text_field( \wp_unslash( $_GET['version'] ) );
 			
 			if ( ! Package::get( $package, $version ) ) {
 				\http_response_code( 404 );
@@ -139,5 +139,27 @@ final class Request {
 		}
 		// phpcs:enable WordPress.Security.EscapeOutput.OutputNotEscaped
 		exit;
+	}
+	
+	/**
+	 * Check, whether the current request requires authentication.
+	 * 
+	 * @param	string	$package Package name
+	 * @param	string	$version Package version
+	 * @return	bool Whether authentication is required
+	 */
+	private static function requires_authentication( string $package, string $version ): bool {
+		$data = Package::get_data( $package, $version );
+		
+		/**
+		 * Filter whether authentication is required.
+		 * 
+		 * @since	1.1.0 Added parameters $name and $version
+		 * 
+		 * @param	bool	$authentication_required Wether authentication is required
+		 * @param	string	$package Package name
+		 * @param	string	$version Package version
+		 */
+		return (bool) \apply_filters( 'composer_packages_authentication_required', $data['authentication_required'] ?? true, $package, $version );
 	}
 }

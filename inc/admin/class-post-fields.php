@@ -22,6 +22,7 @@ final class Post_Fields {
 	 */
 	public static function init(): void {
 		\add_action( 'save_post_' . Post_Type::PACKAGE_NAME, [ self::class, 'save' ] );
+		\add_filter( 'composer_packages_field_current_value', [ Field::class, 'get_new_post_value' ], 10, 2 );
 	}
 	
 	/**
@@ -65,6 +66,13 @@ final class Post_Fields {
 				'title' => \__( 'Version', 'composer-packages' ),
 				'type' => 'text',
 			],
+			[
+				'name' => 'authentication_required',
+				'option_type' => 'postmeta',
+				'scope' => [ Post_Type::PACKAGE_NAME ],
+				'title' => \__( 'Authentication required', 'composer-packages' ),
+				'type' => 'checkbox',
+			],
 		];
 	}
 	
@@ -81,7 +89,9 @@ final class Post_Fields {
 					?>
 					<tr class="form-field">
 						<th scope="row">
+							<?php if ( $field['type'] !== 'checkbox' && $field['type'] !== 'radio' ) : ?>
 							<label for="<?php echo \esc_attr( $field['name'] ); ?>"><?php echo \esc_html( $field['title'] ); ?></label>
+							<?php endif; ?>
 						</th>
 						<td><?php Field::get_the_html( $field ); ?></td>
 					</tr>
